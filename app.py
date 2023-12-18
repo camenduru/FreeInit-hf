@@ -86,7 +86,7 @@ examples = [
     # ]
     # 5-RealisticVision
     [
-        "realisticVisionV20_v20.safetensors", 
+        "realisticVisionV51_v20Novae.safetensors", 
         "mm_sd_v14.ckpt", 
         "b&w photo of 42 y.o man in black clothes, bald, face, half body, body, high detailed skin, skin pores, coastline, overcast weather, wind, waves, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
         "(semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
@@ -359,6 +359,9 @@ def ui():
                     <a title="Video" href="https://youtu.be/lS5IYbAqriI" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
                         <img src="https://img.shields.io/badge/YouTube-Video-red?logo=youtube&logoColor=red">
                     </a>
+                    <a title="Visitor" href="https://hits.seeyoufarm.com" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+                        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhuggingface.co%2Fspaces%2FTianxingWu%2FFreeInit&count_bg=%23678F74&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false">
+                    </a>
             </p>
             """
             # <a title="Visitor" href="https://hits.seeyoufarm.com" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
@@ -367,9 +370,8 @@ def ui():
         )
         gr.Markdown(
             """
-            Official Gradio Demo for ***FreeInit: Bridging Initialization Gap in Video Diffusion Models***.<br>
-            FreeInit improves time consistency of diffusion-based video generation at inference time.
-            In this demo, we apply FreeInit on [AnimateDiff v1](https://github.com/guoyww/AnimateDiff) as an example.<br>
+            Official Gradio Demo for ***FreeInit: Bridging Initialization Gap in Video Diffusion Models***.
+            FreeInit improves time consistency of diffusion-based video generation at inference time. In this demo, we apply FreeInit on [AnimateDiff v1](https://github.com/guoyww/AnimateDiff) as an example.<br>
             """
         )
 
@@ -397,7 +399,7 @@ def ui():
                     *Prompt Tips:*
 
                     For each personalized model in `Model Settings`, you can refer to their webpage on CivitAI to learn how to write good prompts for them:
-                    - [`realisticVisionV20_v20.safetensors`](https://civitai.com/models/4201?modelVersionId=29460)
+                    - [`realisticVisionV51_v20Novae.safetensors`](https://civitai.com/models/4201?modelVersionId=29460)
                     - [`toonyou_beta3.safetensors`](https://civitai.com/models/30240?modelVersionId=78775)
                     - [`lyriel_v16.safetensors`](https://civitai.com/models/22922/lyriel)
                     - [`rcnzCartoon3d_v10.safetensors`](https://civitai.com/models/66347?modelVersionId=71009)
