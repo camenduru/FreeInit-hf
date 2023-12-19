@@ -34,13 +34,23 @@ css = """
 """
 
 examples = [
+    # 0-RealisticVision
+    [
+        "realisticVisionV51_v20Novae.safetensors", 
+        "mm_sd_v14.ckpt", 
+        "A panda standing on a surfboard in the ocean under moonlight.",
+        "worst quality, low quality, nsfw, logo",
+        512, 512, "2005563494988190",
+        "butterworth", 0.25, 0.25, 3,
+        ["use_fp16"]
+    ]
     # 1-ToonYou
     [
         "toonyou_beta3.safetensors", 
         "mm_sd_v14.ckpt", 
-        "(best quality, masterpiece), close up, 1girl, red clothes, sitting, elf, pond, in water, deep forest, waterfall, looking away, blurry background",
-        "worst quality, low quality, nsfw, logo",
-        512, 512, "1566149281915957",
+        "(best quality, masterpiece), 1girl, looking at viewer, blurry background, upper body, contemporary, dress",
+        "(worst quality, low quality)",
+        512, 512, "478028150728261",
         "butterworth", 0.25, 0.25, 3,
         ["use_fp16"]
     ],
@@ -50,7 +60,7 @@ examples = [
         "mm_sd_v14.ckpt", 
         "hypercars cyberpunk moving, muted colors, swirling color smokes, legend, cityscape, space",
         "3d, cartoon, anime, sketches, worst quality, low quality, nsfw, logo",
-        512, 512, "4954488479039740",
+        512, 512, "1566149281915957",
         "butterworth", 0.25, 0.25, 3,
         ["use_fp16"]
     ],
@@ -60,7 +70,7 @@ examples = [
         "mm_sd_v14.ckpt", 
         "A cute raccoon playing guitar in a boat on the ocean",
         "worst quality, low quality, nsfw, logo",
-        512, 512, "2005563494988190",
+        512, 512, "1566149281915957",
         "butterworth", 0.25, 0.25, 3,
         ["use_fp16"]
     ],
@@ -69,7 +79,7 @@ examples = [
         "majicmixRealistic_v5Preview.safetensors", 
         "mm_sd_v14.ckpt", 
         "1girl, reading book",
-        "bad hand, worst quality, low quality, normal quality, lowres, bad anatomy, bad hands, watermark, moles",
+        "(ng_deepnegative_v1_75t:1.2), (badhandv4:1), (worst quality:2), (low quality:2), (normal quality:2), lowres, bad anatomy, bad hands, watermark, moles",
         512, 512, "2005563494988190",
         "butterworth", 0.25, 0.25, 3,
         ["use_fp16"]
@@ -84,16 +94,6 @@ examples = [
     #     "butterworth", 0.25, 0.25, 3,
     #     ["use_fp16"]
     # ]
-    # 5-RealisticVision
-    [
-        "realisticVisionV51_v20Novae.safetensors", 
-        "mm_sd_v14.ckpt", 
-        "b&w photo of 42 y.o man in black clothes, bald, face, half body, body, high detailed skin, skin pores, coastline, overcast weather, wind, waves, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
-        "(semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-        512, 512, "1566149281915957",
-        "butterworth", 0.25, 0.25, 3,
-        ["use_fp16"]
-    ]
 ]
 
 # clean unrelated ckpts
@@ -371,7 +371,7 @@ def ui():
         gr.Markdown(
             """
             Official Gradio Demo for ***FreeInit: Bridging Initialization Gap in Video Diffusion Models***.
-            FreeInit improves time consistency of diffusion-based video generation at inference time. In this demo, we apply FreeInit on [AnimateDiff v1](https://github.com/guoyww/AnimateDiff) as an example.<br>
+            FreeInit improves time consistency of diffusion-based video generation at inference time. In this demo, we apply FreeInit on [AnimateDiff v1](https://github.com/guoyww/AnimateDiff) as an example. Takes around 80s per prompt.<br>
             """
         )
 
@@ -399,7 +399,7 @@ def ui():
                     *Prompt Tips:*
 
                     For each personalized model in `Model Settings`, you can refer to their webpage on CivitAI to learn how to write good prompts for them:
-                    - [`realisticVisionV51_v20Novae.safetensors`](https://civitai.com/models/4201?modelVersionId=29460)
+                    - [`realisticVisionV51_v20Novae.safetensors`](https://civitai.com/models/4201?modelVersionId=130072)
                     - [`toonyou_beta3.safetensors`](https://civitai.com/models/30240?modelVersionId=78775)
                     - [`lyriel_v16.safetensors`](https://civitai.com/models/22922/lyriel)
                     - [`rcnzCartoon3d_v10.safetensors`](https://civitai.com/models/66347?modelVersionId=71009)
