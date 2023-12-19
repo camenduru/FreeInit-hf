@@ -479,7 +479,7 @@ def ui():
             
             generate_button.click( fn=controller.animate, inputs=inputs, outputs=outputs )
                 
-        gr.Examples( fn=controller.animate, examples=examples, inputs=inputs, outputs=outputs, cache_examples=True)
+        gr.Examples( fn=controller.animate, examples=examples, inputs=inputs, outputs=outputs, cache_examples=False)
 
     return demo
 
