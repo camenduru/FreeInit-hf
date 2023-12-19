@@ -371,7 +371,7 @@ def ui():
         gr.Markdown(
             """
             Official Gradio Demo for ***FreeInit: Bridging Initialization Gap in Video Diffusion Models***.
-            FreeInit improves time consistency of diffusion-based video generation at inference time. In this demo, we apply FreeInit on [AnimateDiff v1](https://github.com/guoyww/AnimateDiff) as an example. Takes around 80s per prompt.<br>
+            FreeInit improves time consistency of diffusion-based video generation at inference time. In this demo, we apply FreeInit on [AnimateDiff v1](https://github.com/guoyww/AnimateDiff) as an example. Sampling time: ~ 80s.<br>
             """
         )
 
