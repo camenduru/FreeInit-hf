@@ -43,7 +43,7 @@ examples = [
         512, 512, "2005563494988190",
         "butterworth", 0.25, 0.25, 3,
         ["use_fp16"]
-    ]
+    ],
     # 1-ToonYou
     [
         "toonyou_beta3.safetensors", 
