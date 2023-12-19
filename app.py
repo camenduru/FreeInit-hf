@@ -487,4 +487,4 @@ def ui():
 if __name__ == "__main__":
     demo = ui()
     demo.queue(max_size=20)
-    demo.launch()
+    demo.launch(share=True)
