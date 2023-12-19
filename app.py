@@ -120,9 +120,9 @@ examples = [
 # os.system(f"bash download_bashscripts/4-MajicMix.sh")
 # os.system(f"bash download_bashscripts/5-RealisticVision.sh")
 
-# clean Gradio cache
-print(f"### Cleaning cached examples ...")
-os.system(f"rm -rf gradio_cached_examples/")
+# # clean Gradio cache
+# print(f"### Cleaning cached examples ...")
+# os.system(f"rm -rf gradio_cached_examples/")
 
 
 class AnimateController:
@@ -442,7 +442,7 @@ def ui():
                         width_slider  = gr.Slider(  label="Width",  value=512, minimum=256, maximum=1024, step=64 )
                         height_slider = gr.Slider(  label="Height", value=512, minimum=256, maximum=1024, step=64 )
                     with gr.Row():
-                        seed_textbox = gr.Textbox( label="Seed",  value=1566149281915957)
+                        seed_textbox = gr.Textbox( label="Seed",  value=2005563494988190)
                         seed_button  = gr.Button(value="\U0001F3B2", elem_classes="toolbutton")
                         seed_button.click(fn=lambda: gr.Textbox.update(value=random.randint(1, 1e16)), inputs=[], outputs=[seed_textbox])
                     with gr.Row():
